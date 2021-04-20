@@ -1,0 +1,15 @@
+{
+ "language": "English",
+ "@language": {
+  "description": "The current Language"
+ },
+ "appTitle": "Flutter Camp",
+ "@appTitle": {
+  "description": "The current homepage title"
+ },
+ "homepageTitle": "HomePage",
+ "@homepageTitle": {
+  "description": "The current homepage title"
+ }
+ 
+}
