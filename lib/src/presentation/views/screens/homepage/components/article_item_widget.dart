@@ -41,7 +41,7 @@ class ArticleItem extends StatelessWidget {
                 child: Hero(
                   tag: 'PImg',
                   child: Image.network(
-                    ?article.imageUrl ?? '',
+                    article.imageUrl ?? '',
                     fit: BoxFit.cover,
                     loadingBuilder: (BuildContext context, Widget child,
                         ImageChunkEvent loadingProgress) {

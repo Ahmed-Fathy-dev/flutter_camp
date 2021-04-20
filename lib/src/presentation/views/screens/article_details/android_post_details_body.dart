@@ -4,7 +4,6 @@ import 'package:flutter_camp/src/domain/entities/articles/article.dart';
 import 'package:flutter_camp/src/presentation/views/widgets/common_widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/html_parser.dart';
 import 'package:flutter_html/style.dart';
 
 class AndroidPostDetailsBody extends HookWidget {

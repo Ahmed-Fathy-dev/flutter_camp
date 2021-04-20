@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_camp/src/injector.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import './src/presentation/blocs/categories/remote_categories/main_categories_bloc/remote_categories_bloc.dart';
 import './src/config/router/app_route.dart';
 import 'src/config/l10n/l10n.dart';
@@ -45,6 +46,19 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         onGenerateTitle: (BuildContext context) => AppLocalizations.of(context).appTitle,
         theme: FlutterCampTheme.of(context),
+        builder: (context, widget) => ResponsiveWrapper.builder(
+                    BouncingScrollWrapper.builder(context, widget),
+                    maxWidth: 1200,
+                    minWidth: 450,
+                    defaultScale: true,
+                    breakpoints: [
+                      ResponsiveBreakpoint.resize(450, name: MOBILE),
+                      ResponsiveBreakpoint.autoScale(800, name: TABLET),
+                      ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+                      ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+                      ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+                    ],
+                  )
       ),
     );
   }

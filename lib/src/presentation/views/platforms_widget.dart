@@ -20,7 +20,7 @@ class PlatformsWidget extends StatelessWidget {
         return androidBuilder(context);
         break;
       case TargetPlatform.iOS:
-        return iosBuilder(context);
+        return androidBuilder(context);
         break;
       case TargetPlatform.windows:
         return desktopBuilder(context);
